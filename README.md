@@ -9,11 +9,14 @@ The full write-up with derivations, figures and references is in [`report/main.p
 
 ## Result at a glance
 
+The same BKX European call, priced two ways:
+
 <p align="center">
-  <img src="report/plots/diffusion_BKX.png" width="640" alt="BKX call: diffusion solver vs analytical">
+  <img src="monte_carlo/plots/BKX_european_call.png" width="480" alt="MC running mean, BKX European call">
+  <img src="report/plots/diffusion_BKX.png" width="480" alt="Diffusion solver vs analytical, BKX European call">
 </p>
 
-The diffusion solver reproduces the analytical Black--Scholes price for the BKX European call (S₀=52.93, X=37.5, σ=0.1586, T=17/365) to within 0.4% at S₀; on a longer benchmark (T=1, σ=0.30, r=0.05, X=100) it matches the full analytical call surface across the entire (S, τ) grid.
+Left: Monte Carlo running mean converging into the quoted bid--ask band. Right: the diffusion-equation solver's price curve $C(S,0)$ overlaid on the analytical Black--Scholes curve (they overlap). Same option in both, S₀=52.93, X=37.5, σ=0.1586, T=17/365. Both methods agree with the analytical price to well within the market bid--ask spread.
 
 ## Layout
 
