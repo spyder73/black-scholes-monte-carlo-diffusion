@@ -1,0 +1,2 @@
+label,option_type,S0,K,r,sigma,T,stepSize,N,bid,ask
+BKX_european_put,european_put,52.93,37.5,0.01,0.1872,17.0,250,10000,0,0.2
